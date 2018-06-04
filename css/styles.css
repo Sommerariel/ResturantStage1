@@ -46,7 +46,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-	min-width: 100%;
+	min-width: 100% !important;
 }
 #filter {
   width: 100%;
@@ -119,6 +119,9 @@ nav h1 a {
   width: 100%;
   background-color: #ccc;
 }
+#map-container{
+	width: 100%;
+}
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
@@ -147,7 +150,7 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
-  background-color: #f3f3f3;
+  background-color: #fff;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
@@ -155,8 +158,9 @@ nav h1 a {
 
 }
 #restaurants-list li {
-  background-color: #fff;
-  border: 2px solid #ccc;
+	border: 2px solid #fff;
+  border-radius: 5px;
+	box-shadow: 5px 10px 18px #888888;
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
@@ -186,13 +190,17 @@ nav h1 a {
   margin: 0;
   font-size: 11pt;
 }
+#restaurants-list img{
+	padding-top: 10px;
+	background-color: #fff;
+}
 #restaurants-list li a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
   font-size: 10pt;
-  margin: 15px 0 0;
+  margin: 15px;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
@@ -210,6 +218,11 @@ nav h1 a {
 		max-width: 28%;
 		margin: auto;
 		margin-bottom: 20px;
+	}
+	#restaurants-list {
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -229,9 +242,6 @@ nav h1 a {
   width: 50%;
 }
 
-#map-container{
-	width: 100%;
-}
 .inside #map {
   background-color: #ccc;
   height: 100%;
