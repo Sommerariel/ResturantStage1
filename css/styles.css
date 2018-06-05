@@ -18,7 +18,7 @@ ul{
 }
 
 body {
-	background-color: #fdfdfd;
+	background-color: #fff;
 	margin: 0;
 	position:relative;
 }
@@ -119,10 +119,11 @@ nav h1 a {
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
-    background-color: #3BCCCC;
+    background-color: #f3f3f3;
     font-size: 1em;
     margin: 0;
 		text-align: left;
+		width: 100%;
 }
 
 /* Display list items side by side */
@@ -321,7 +322,7 @@ nav h1 a {
   border-top: 1px solid #fff;
   padding: 13em 2.8em 2.1em;
   width: 100%;
-	flex-direction: column;
+	/*flex-direction: column;*/
 }
 
 #reviews-container {
