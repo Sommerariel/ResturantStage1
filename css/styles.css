@@ -322,7 +322,9 @@ nav h1 a {
   border-top: 1px solid #fff;
   padding: 20em 2.8em 2.1em;
   width: 100%;
-	/*flex-direction: column;*/
+}
+#restaurant-container{
+	flex-basis: 100%;
 }
 
 #reviews-container {
@@ -398,7 +400,9 @@ nav h1 a {
 	}
 	#restaurant-container{
 		padding: 13em 2.8em 2.1em;
+		flex-basis: 50%;
 		width: 50%;
 	}
+
 
 }
