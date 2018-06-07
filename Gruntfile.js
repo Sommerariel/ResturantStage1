@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           expand: true,
           src: ['*.{gif,jpg,png}'],
           cwd: 'img',
-          dest: 'images/'
+          dest: 'img/'
         }]
       }
     },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     mkdir: {
       dev: {
         options: {
-          create: ['images']
+          create: ['img']
         },
       },
     },
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: 'images_src/fixed/*.{gif,jpg,png}',
-          dest: 'images/'
+          dest: 'img/'
         }]
       },
     },//do I need this comma?
