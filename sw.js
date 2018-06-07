@@ -1,7 +1,9 @@
 /* service worker script */
 
-//declare cache
+//declare caches
+
 const  Reviews = 'reviews';
+
 
 //install the service worker and cache files
 self.addEventListener('instal', function(event) {
@@ -20,3 +22,16 @@ self.addEventListener('instal', function(event) {
     })
   )
 })
+
+//get from the cache if possible, if not check the network
+/*self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      //if you have a match in the cache you are returning it
+      if(!response || response.status !== 200 || response.type !== 'basic'){
+        return response;
+      }
+
+    })
+  )
+})*/
