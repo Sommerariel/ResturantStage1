@@ -6,6 +6,7 @@ const  Reviews = 'reviews';
 
 
 //install the service worker and cache files
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('reviews').then(function(cache) {
@@ -24,6 +25,7 @@ self.addEventListener('install', function(event) {
 })
 
 //get from the cache if possible, if not check the network
+
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
@@ -43,16 +45,18 @@ self.addEventListener('fetch', function(event) {
       let responseToCache = response.clone();
 
       //open the cache and put the items into it
-      caches.open('reviews').the(function(cache) {
+      caches.open('reviews').then(function(cache) {
         cache.put(event.request, responseToCache);
       })
+      return response;
       })
     })
   )
 })
 
-
+/*
 self.addEventListener('activate', function(event) {
   console.log('service worker is activating');
   )
 })
+*/
