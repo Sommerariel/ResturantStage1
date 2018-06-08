@@ -6,7 +6,7 @@ const  Reviews = 'reviews';
 
 
 //install the service worker and cache files
-self.addEventListener('instal', function(event) {
+self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('reviews').then(function(cache) {
       return cache.addAll(
@@ -49,5 +49,11 @@ self.addEventListener('fetch', function(event) {
       })
       })
     })
+  )
+})
+
+
+self.addEventListener('activate', function(event) {
+  console.log('service worker is activating');
   )
 })
