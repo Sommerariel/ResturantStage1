@@ -54,9 +54,8 @@ self.addEventListener('fetch', function(event) {
   )
 })
 
-/*
+
 self.addEventListener('activate', function(event) {
   console.log('service worker is activating');
   )
 })
-*/
