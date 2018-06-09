@@ -58,6 +58,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 /*TODO Create Responsive Images with alt text*/
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
+  image.alt = `An image taken at ${restaurant.name} Restaurant in ${restaurant.neighborhood} in New York City, NY.`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
