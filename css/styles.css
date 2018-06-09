@@ -6,7 +6,7 @@ td,
 th,
 p{
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
+	font-size: 14pt;
 	color: #333;
 	line-height: 1.5;
 }
@@ -26,7 +26,7 @@ body {
 ul,
 li {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
+	font-size: 14pt;
 	color: #333;
 }
 
@@ -84,11 +84,23 @@ main {
 #footer {
   background-color: #444;
   color: #aaa;
-  font-size: 8pt;
+  font-size: 14pt;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+}
+
+skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #fff;
+	padding: 8px;
+	z-index: 100;
+}
+skip-link:focus {
+	top: 0;
 }
 
 /* ====================== Navigation ====================== */
@@ -204,7 +216,7 @@ nav h1 a {
 	box-shadow: 5px 10px 18px #888888;
   font-family: Arial,sans-serif;
   margin: 1em;
-  min-height: 380px;
+  min-height: 400px;
   padding: 0 1em 1.7em;
   text-align: left;
   max-width: 100%;
@@ -223,7 +235,7 @@ nav h1 a {
 #restaurants-list li h3 {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 200;
   letter-spacing: 0;
   line-height: 1.3;
@@ -299,14 +311,14 @@ nav h1 a {
 }
 
 #restaurant-address {
-  font-size: 12pt;
-  margin: 10px;
+  font-size: 1em;
+  margin: 1em;
 }
 
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
-  font-size: 12pt;
+  font-size: 1em;
   font-weight: 300;
   letter-spacing: 10px;
   margin: 0 0 20px;
