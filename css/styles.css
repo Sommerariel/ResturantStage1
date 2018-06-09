@@ -10,6 +10,28 @@ p{
 	color: #333;
 	line-height: 1.5;
 }
+.hidden {
+	position: absolute;
+	left: -1000px;
+	top: -1000px ;
+	width:1px;
+	height:1px;
+	clip:
+	overflow: hidden;
+	background: #fff;
+	padding: 8px;
+	z-index: 100;
+}
+
+a.hidden:focus,
+a.hidden:active,
+a.hidden:hover {
+	top: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+	overflow: visible;
+}
 
 body,
 ul{
@@ -91,17 +113,7 @@ main {
   text-transform: uppercase;
 }
 
-skip-link {
-	position: absolute;
-	top: -40px;
-	left: 0;
-	background: #fff;
-	padding: 8px;
-	z-index: 100;
-}
-skip-link:focus {
-	top: 0;
-}
+
 
 /* ====================== Navigation ====================== */
 nav {
