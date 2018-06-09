@@ -55,6 +55,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
+/*TODO Create Responsive Images with alt text*/
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
@@ -115,6 +116,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 /**
  * Create review HTML and add it to the webpage.
  */
+ /*TODO assign varibale to ratings and review name to call later*/
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
