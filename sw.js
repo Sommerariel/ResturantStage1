@@ -54,8 +54,20 @@ self.addEventListener('fetch', function(event) {
   )
 })
 
-
+//delete old service workers
 self.addEventListener('activate', function(event) {
-  console.log('service worker is activating');
+  //console.log('service worker is activating');
+  let cacheWhitelist = ['reviews']
+
+    event.waitUntil(
+      caches.keys().then(cacheNames function() {
+        return Promise.all(
+          cacheNames.map(function(cacheNames) {
+            if (cacheWhitelist.indexOf(cacheName) === -1){
+              return caches.delete(cacheName);
+            }
+          })
+        )
+      })
   )
 })
