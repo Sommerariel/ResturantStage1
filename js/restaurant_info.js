@@ -120,20 +120,25 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  /*TODO assign varibale to ratings and review name to call later*/
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.className = 'reviewBlock';
   const name = document.createElement('p');
   name.innerHTML = review.name;
+  name.className = 'reviewerName';
   li.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
+  date.className ='reviewDate';
   li.appendChild(date);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.className = 'reviewRating';
   li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.className = 'reviewComments';
   li.appendChild(comments);
 
   return li;
