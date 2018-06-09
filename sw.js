@@ -7,7 +7,7 @@ const  Reviews = 'reviews';
 
 //install the service worker and cache files
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('reviews').then(function(cache) {
       return cache.addAll(
@@ -26,16 +26,18 @@ self.addEventListener('install', function(event) {
 
 //get from the cache if possible, if not check the network
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then(response => {
       //if you have a match in the cache you are returning it
-      if(response) { return response; }
+      if (response) {
+        return response;
+      }
 
       //clone the request since it cannot be used more than once
       let fetchRequest = event.request.clone();
 
-      return fetch(fetchRequest).then(function(response){
+      return fetch(fetchRequest).then(response => {
         //Check if we are getting a valid response. Basic means that the request is from our origin and third part items are not cached at all.
         if(!response || response.status !== 200 || response.type !== 'basic') {
               return response;
@@ -45,7 +47,7 @@ self.addEventListener('fetch', function(event) {
       let responseToCache = response.clone();
 
       //open the cache and put the items into it
-      caches.open('reviews').then(function(cache) {
+      caches.open('reviews').then(cache => {
         cache.put(event.request, responseToCache);
       })
       return response;
@@ -55,16 +57,16 @@ self.addEventListener('fetch', function(event) {
 })
 
 //delete old service workers
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', event => {
   //console.log('service worker is activating');
   let cacheWhitelist = ['reviews'];
 
     event.waitUntil(
-      caches.keys().then(cacheNames function() {
+      caches.keys().then(cacheNames => {
         return Promise.all(
-          cacheNames.map(function(cacheNames) {
-            if (cacheWhitelist.indexOf(cacheName) === -1){
-              return caches.delete(cacheName);
+          cacheNames.map(cacheNames => {
+            if (cacheWhitelist.indexOf('reviews') === -1){
+              return caches.delete('reviews');
             }
           })
         )
