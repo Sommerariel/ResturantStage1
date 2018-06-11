@@ -319,6 +319,8 @@ nav h1 a {
 
 #restaurant-img {
 	width: 90%;
+	min-height: 200px;
+	overflow: hidden;
 	border-radius: 25px 0 0 0;
 }
 
@@ -440,6 +442,10 @@ nav h1 a {
 		margin: auto;
 		margin-bottom: 1.4em;
 	}
+
+	#restaurant-img{
+		min-height: 400px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -467,6 +473,5 @@ nav h1 a {
 		flex-basis: 50%;
 		width: 50%;
 	}
-
 
 }
