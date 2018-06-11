@@ -287,7 +287,7 @@ nav h1 a {
 
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 30vh;
+  height: 35vh;
   position: fixed;
   right: 0;
   top: 80px;
@@ -397,6 +397,7 @@ nav h1 a {
 .reviewBlock {
 	display: flex;
 	flex-wrap: wrap;
+	overflow: auto;
 
 }
 .reviewerName,
@@ -405,7 +406,7 @@ nav h1 a {
 	max-height: 15%;
 }
 .reviewerName {
-	width: 55%;
+	width: 45%;
 	background-color: #505050;
 	color: #fff;
 	font-size: 1.2em;
@@ -413,7 +414,7 @@ nav h1 a {
 }
 
 .reviewDate {
-  width: 41%;
+  width: 47%;
 	text-shadow: 2px 2px 4px #888888;
 	background-color: #505050;
 	color: #fff;
@@ -422,7 +423,7 @@ nav h1 a {
 
 }
 .reviewRating {
-	width: 20%;
+	width: 30%;
 	background-color: #f58500;
 	border-radius: 5px;
 	color: #fff;
@@ -443,8 +444,17 @@ nav h1 a {
 		margin-bottom: 1.4em;
 	}
 
-	#restaurant-img{
+	#restaurant-img {
 		min-height: 400px;
+	}
+	.reviewerName {
+		width: 55%;
+	}
+	.reviewDate {
+		width: 41%;
+	}
+	.reviewRating {
+		width: 20%;
 	}
 }
 
