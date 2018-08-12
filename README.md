@@ -27,3 +27,4 @@ Most of the code in this project has been written to the ES6 JavaScript specific
 ---
 My Project Thus Far
 This app is meant to be a reflection of the material learned within the first 1/3 of the Mobile Web Specialist Certification Course. I have adapted the code given me to be reflect 3 core areas: responsiveness, offline availability and accessibility. The content renders across a variety of viewports and size and changes depending on screen size. The images are loaded in only at the sizes needs to. Not too much, not too little. All content is accessible offline and in lo-fi connections for when the app cannot connect properly to the network. The app is also accessible to those who use keyboard functionality as well as a screen reader with the help of ARIA. 
+# RestaurantStage2
